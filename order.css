@@ -1,0 +1,401 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+#logo {
+  max-width: 100%;
+  width: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* padding-top: 7px; */
+}
+
+#logo img {
+  height: 4rem;
+  border-radius: 2rem;
+}
+/* list-style */
+
+#navbar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 100%;
+  width: 80%;
+}
+#navbar::before {
+  content: "";
+  background-color: black;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 12%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.4;
+}
+#navbar ul li {
+  list-style: none;
+  font-size: 1.25rem;
+  font-family: Agbalumo;
+  margin: 0px 20px;
+}
+#navbar ul li a {
+  color: white;
+  display: block;
+  padding: 5px 8px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+#navbar ul li a:hover {
+  color: black;
+  border-radius: 10px;
+  background-color: white;
+}
+.link-order {
+  max-width: 100%;
+  width: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-decoration: none;
+}
+.btn2 {
+  padding: 4px 8px;
+  border-radius: 0.625rem;
+  font-size: 1.25rem;
+  font-family: Agbalumo;
+  opacity: 1;
+  background-color: rgb(163, 43, 43);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.btn2 a {
+  color: white;
+  text-decoration: none;
+}
+
+#main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px 20px;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  margin: 33px;
+
+}
+
+.card {
+  background-color: #f0f0f0;
+  /* padding: 20px; */
+  text-align: center;
+  width: 360px;
+  height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(40%);
+  transition: all 1000ms ease-in-out;
+}
+.card img:hover {
+  transform: rotate(5deg);
+}
+
+.card-1 {
+  background: url(breakfast.jpg);
+  position: relative;
+}
+.card-2 {
+  background: url(brunch.jpg);
+  position: relative;
+}
+.card-3 {
+  background: url(lunch.jpg);
+  position: relative;
+}
+.card-4 {
+  background: url(dinner.jpg);
+  position: relative;
+}
+.card-5 {
+  background: url(kids\ meal.jpg);
+  position: relative;
+}
+.card-6 {
+  background: url(sweet.jpg);
+  position: relative;
+}
+.textover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: rgb(247, 236, 236);
+  font-size: 2rem;
+}
+
+/* Utility classes */
+.h-primery {
+  font-size: 3.8rem;
+  padding: 15px;
+  font-family: Agbalumo;
+  /* margin: 34px; */
+}
+
+.center {
+  text-align: center;
+}
+footer {
+  background-color: grey;
+  color: white;
+  height: 6vh;
+  font-size: larger;
+}
+
+@media screen and (min-device-width: 881px) and (max-device-width: 1200px) {
+  #logo {
+    width: 12%;
+  }
+
+  #navbar ul {
+    width: 68%;
+  }
+  #navbar ul li {
+    margin: 0px 10px;
+  }
+  .link-order {
+    width: 20%;
+  }
+
+  .btn2 {
+    padding: 3px 7px;
+  }
+
+  .h-primery {
+    font-size: 2.7rem;
+  }
+
+  .h-secondary {
+    font-size: 2.3rem;
+  }
+  .card {
+    height:280px ;
+    width: 270px;
+  }
+  .textover {
+    font-size: 1.5rem;
+  }
+
+}
+@media screen and (min-device-width: 1024px) and (max-device-width: 1201px){
+  .card {
+    height:320px ;
+    width: 320px;
+  }
+}
+@media screen and (min-device-width: 768px) and (max-device-width: 880px) {
+  #logo {
+    width: 10%;
+  }
+
+  #navbar ul {
+    width: 65%;
+  }
+
+  .link-order {
+    width: 25%;
+  }
+  .h-primery {
+    font-size: 2.2rem;
+  }
+  #navbar ul li {
+    margin: 0px 4px;
+  }
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);}
+}
+@media screen and (min-device-width: 650px) and (max-device-width: 767px) {
+  #navbar ul li {
+    font-size: 0.8rem;
+  }
+  #logo {
+    width: 10%;
+  }
+
+  #navbar ul {
+    width: 65%;
+  }
+  #navbar ul li {
+    margin: 0px 0px;
+  }
+  .link-order {
+    width: 25%;
+  }
+  .btn2 {
+    padding: 4px 8px;
+    font-size: 1rem;
+  }
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .h-primery {
+    font-size: 2.5rem;
+  }
+  .card {
+    height: 300px ;
+    width: 300px;
+  }
+}
+@media screen and (min-device-width: 500px) and (max-device-width: 649px) {
+  #navbar ul li {
+    font-size: 0.8rem;
+  }
+  #logo {
+    width: 10%;
+  }
+
+  #navbar ul {
+    width: 65%;
+  }
+  #navbar ul li {
+    margin: 0px 0px;
+  }
+  .link-order {
+    width: 25%;
+  }
+  .btn2 {
+    padding: 4px 8px;
+    font-size: 1rem;
+  }
+  .h-primery {
+    font-size: 2.5rem;
+  }
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card {
+    height:226px ;
+    width: 226px;
+  }
+  .textover {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-device-width: 400px) and (max-device-width: 499px) {
+ #navbar ul li {
+    font-size: 0.5rem;
+  }
+  #logo {
+    width: 15%;
+  }
+  #navbar::before {
+    height: 9%;
+  }
+  #navbar ul {
+    width: 65%;
+  }
+  #navbar ul li {
+    margin: 0px 0px;
+  }
+  .link-order {
+    width: 20%;
+  }
+  #logo img {
+    height: 2rem;
+  }
+  .h-primery {
+    font-size: 2rem;
+  }
+  .btn2 {
+    padding: 4px 8px;
+    font-size: 0.5rem;
+  }
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card {
+    height:250px ;
+    width: 280px;
+  }
+  .textover {
+    font-size: 1.3rem;
+  }
+  footer {
+    font-size: 0.7rem;
+    padding-top:10px ;
+  }
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 399px) {
+ 
+  #navbar ul li {
+    font-size: 0.5rem;
+  }
+  #logo {
+    width: 15%;
+  }
+  #navbar::before {
+    height: 9%;
+  }
+  #navbar ul {
+    width: 65%;
+  }
+  #navbar ul li {
+    margin: 0px 0px;
+  }
+  .link-order {
+    width: 20%;
+  }
+  #logo img {
+    height: 2rem;
+  }
+  .h-primery {
+    font-size: 2rem;
+  }
+  .btn2 {
+    padding: 4px 8px;
+    font-size: 0.5rem;
+  }
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card {
+    height:250px ;
+    width: 280px;
+  }
+  .textover {
+    font-size: 1.3rem;
+  }
+  footer {
+    font-size: 0.7rem;
+    padding-top:10px ;
+  }
+}
